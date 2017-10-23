@@ -1,0 +1,34 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:divider="?android:attr/dividerHorizontal"
+    android:orientation="horizontal"
+    tools:context="com.example.dinasaad.popularmoviesapp.MainActivity">
+
+    <!--
+    This layout is a two-pane layout for the Items master/detail flow.
+    -->
+
+
+    <fragment
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:name="com.example.dinasaad.popularmoviesapp.MoviesFragment"
+        android:layout_width="508dp"
+        android:layout_height="match_parent"
+        android:id="@+id/container"
+        android:layout_weight="2"
+        tools:context="com.example.dinasaad.popularmoviesapp.MoviesFragment"
+        tools:layout="@android:layout/list_content">
+    </fragment>
+
+    <FrameLayout
+        android:id="@+id/TabletContainer"
+        android:layout_width="512dp"
+        android:layout_height="match_parent"
+        android:layout_weight="4"
+        android:layout_gravity="right|top" />
+
+</FrameLayout>
